@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 3.0)
+project(find-degree)
+find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+include_directories("/home/jim/.nix-profile/include")
+add_executable(find-degree main.cpp)
+target_link_libraries(find-degree Eigen3::Eigen /home/jim/.nix-profile/lib/libnlopt.so)
